@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="calculator-wrapper">
+            <form id="form-calculator" class="shadow bordered rounded p-3" method="get" action="result.html">
+                <div class="calculator-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label" for="person1">Your Name</label>
+                                <input type="text" name="person1" id="person1" class="form-control" placeholder="Enter Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Your Gender</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender1" id="gender1_male" value="male" checked>
+                                        <label class="form-check-label" for="gender1_male">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender1" id="gender1_female" value="female">
+                                        <label class="form-check-label" for="gender1_female">Female</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label" for="person2">Partner's Name</label>
+                                <input type="text" name="person2" id="person2" class="form-control" placeholder="Enter Partner's Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Partner's Gender</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender2" id="gender2_male" value="male">
+                                        <label class="form-check-label" for="gender2_male">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender2" id="gender2_female" value="female" checked>
+                                        <label class="form-check-label" for="gender2_female">Female</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success btn-lg">Calculate Love %</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
