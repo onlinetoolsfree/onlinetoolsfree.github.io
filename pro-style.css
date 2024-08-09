@@ -146,7 +146,7 @@ h1.bd-title.website-subhead, section.showcase h2, section.showcase p {
 img.model-logo {
     display: flex;
     border-radius: 50%;
-    height: 175px;
+    height: auto;
     width: 175px;
     margin: 1% auto;
 }
