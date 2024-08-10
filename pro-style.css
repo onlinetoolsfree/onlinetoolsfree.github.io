@@ -150,6 +150,9 @@ img.model-logo {
     width: 175px;
     margin: 1% auto;
 }
+.clc-head h1 {
+    font-size: xx-large;
+}
 .post-body p {
     font-size: 20px;
     text-align: justify;
@@ -157,6 +160,17 @@ img.model-logo {
 .post-body img {
     width: 100%;
     overflow: hidden;
+}
+.container.box-shadow span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.container.box-shadow {
+    box-shadow: 5px 5px 20px #ccc;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 20px;
 }
 a.btn.btn-class {
     border: 1px solid #ccc;
@@ -188,6 +202,24 @@ a.btn.btn-class:hover {
 }
 .content h2 {
     padding: 10px 0;
+}
+.sidebar a {
+    text-decoration: none;
+    color: #1c1c1c;
+    font-weight: bold;
+}
+.sidebar a:hover {
+    text-decoration: underline;
+    color: #2c2c2c;
+}
+.col-md-4.sidebar ul li {
+    padding: 5px 10px;
+    box-shadow: 1px 1px 3px #ccc;
+    margin-bottom: 5px;
+    list-style-type: none;
+}
+.col-md-4.sidebar h3 {
+    font-weight: bold;
 }
 .github-stats img {
     max-width: 100%;
@@ -489,11 +521,14 @@ section.love-calculator {
             color: #6fbd33;
         }
 		.love-icon {
-			width: 100%;
-			overflow: hidden;
-		}
+            width: 100%;
+            overflow: hidden;
+            display: grid;
+            justify-content: center;
+            justify-items: center;
+        }
 		.love-icon img {
-			width: 40%;
+			width: 60%;
 			margin: 0 auto;
 			border-radius: 50%;
 		}
