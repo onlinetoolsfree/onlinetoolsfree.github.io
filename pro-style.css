@@ -207,6 +207,7 @@ a.btn.btn-class:hover {
     text-decoration: none;
     color: #1c1c1c;
     font-weight: bold;
+    font-size: 20px;
 }
 .sidebar a:hover {
     text-decoration: underline;
