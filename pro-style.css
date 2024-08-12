@@ -502,7 +502,20 @@ figure.Portfolioimg {
     color: #020202;
 }
 /*blog html css End*/
-
+/*-----------------------Quiz Css Start-------------------*/
+.quiz-container {max-width: 600px;margin: 20px auto;padding: 20px;border-radius: 10px;background-color: #ffffff;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
+.result {font-weight: bold;margin-top: 20px;}
+.hidden {display: none;}
+div#answers button {
+    margin: 5px;
+}
+div#score {
+    font-weight: bold;
+    box-shadow: 1px 1px 3px #3c3b3b;
+    padding: 10px;
+    border-radius: 5px;
+}
+/*-----------------------Quiz Css End-------------------*/
 /*-----------------------------------------------
 				Love Calculator
 ------------------------------------------------*/
