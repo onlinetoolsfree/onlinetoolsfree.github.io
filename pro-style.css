@@ -306,6 +306,9 @@ a.btn.btn-class:hover {
 .common {
     margin: 5% 0;
 }
+.bg-lights {
+    background: #e7e8e9;
+}
 .footer {
     background-color: #333;
     color: #fff;
