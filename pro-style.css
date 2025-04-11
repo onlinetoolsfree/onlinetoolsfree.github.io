@@ -161,6 +161,9 @@ img.model-logo {
     width: 100%;
     overflow: hidden;
 }
+.user-guide figure img {
+    width: 100%;
+}
 .container.box-shadow span {
     font-size: 25px;
     font-weight: bold;
@@ -495,16 +498,14 @@ figure.Portfolioimg {
     display: flex;
     justify-content: center;
 }
-.view-more {
-    
-}
+
 .portfolio-body:hover .view-more {
     color: #020202;
 }
 /*blog html css End*/
 /*-----------------------Quiz Css Start-------------------*/
 .quiz-container {max-width: 600px;margin: 20px auto;padding: 20px;border-radius: 10px;background-color: #ffffff;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
-.result {font-weight: bold;margin-top: 20px;}
+.result {font-weight: bold; margin-top: 20px;}
 .hidden {display: none;}
 div#answers button {
     margin: 5px;
@@ -524,43 +525,42 @@ div#score {
 			font-size: 25px;
 		}
 section.love-calculator {
-    background: ;
     background-size: cover;
 }
 .calculator-bg {
     background: #fff;
 }
-        .result-graph {
-            display: none;
-        }
-        .no-svg-result {
-            font-size: 40px;
-            font-weight: bold;
-            color: #6fbd33;
-        }
-		.love-icon {
-            width: 100%;
-            overflow: hidden;
-            display: grid;
-            justify-content: center;
-            justify-items: center;
-        }
-		.love-icon img {
-			width: 60%;
-			margin: 0 auto;
-			border-radius: 50%;
-		}
-		button#reset-btn {
-			font-size: 20px;
-			font-weight: bold;
-		}
-		div#result-names {
-			font-weight: bold;
-			text-transform: capitalize;
-		}
-        span#love-quote {
-            font-size: 20px;
-        }
+.result-graph {
+    display: none;
+}
+.no-svg-result {
+    font-size: 40px;
+    font-weight: bold;
+    color: #6fbd33;
+}
+.love-icon {
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+.love-icon img {
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+button#reset-btn {
+    font-size: 20px;
+    font-weight: bold;
+}
+div#result-names {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+span#love-quote {
+    font-size: 20px;
+}
 /*-----------------------------------------------
 			Love Calculator End
 ------------------------------------------------*/
