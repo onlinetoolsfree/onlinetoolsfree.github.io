@@ -110,6 +110,9 @@ padding: 15px 10px;
     justify-content: space-between;
     align-items: center;
 }
+.pxpx{
+    padding: 0px 4rem;
+}
 .card-img {
     padding: 10% 0;
 }
