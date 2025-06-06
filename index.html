@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-		<meta charset="UTF-8">
+  <head>
+      <meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="google-site-verification" content="UTxFHuoUYF8hWnwcz9oTUnR67fvD3Xpyu_o_zoDhXNQ" />
 	    	<meta name="google-adsense-account" content="ca-pub-8538301195202460">
@@ -21,218 +21,361 @@
 		<link rel="icon" type="image/x-icon" href="https://onlinetoolsfree.github.io/images/Online_Tools_Free.png">
 		<link rel="canonical" href="https://onlinetoolsfree.github.io/">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-		<link rel="stylesheet" href="pro-style.css">
-        <!--fot test-->
-		<link href="/css/boots/bootstrap.min.css" rel="stylesheet">
-		<link href="/css/boots/font-awesome.min.css" rel="stylesheet">
-		<link href="/css/boots/fontawesome.min.css" rel="stylesheet">
-		<script src="/js/bootstrap.min.js"></script>
-		<script src="/js/jquery-1.9.0.min.js"></script>
-		<!--fot test-->		
-        	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        	<title>Online Tools Free - Make Your Life Easy with Us</title>
-		<style type="text/css">
-			    .category-section {
-			        margin: 4rem 0;
-			        padding: 0 2rem;
-			    }
-			
-			    .category-title {
-			        text-align: center;
-			        margin-bottom: 2rem;
-			        font-size: 2rem;
-			        color: var(--primary-color);
-			    }
-			
-			    .cta-button {
-			        background: var(--primary-color);
-			        color: white;
-			        padding: 1rem 2rem;
-			        border-radius: 25px;
-			        text-decoration: none;
-			        display: inline-block;
-			        margin-top: 1rem;
-			        transition: background 0.3s;
-			    }
-			
-			    .cta-button:hover {
-			        background: var(--secondary-color);
-			    }
-			    
-			    span.title-color {
-			        color: #F44336;
-			        border-bottom: 3px solid #2563eb;
-			    }
-			
-			    .tool-card a {
-			        color: #212529;
-			        text-decoration: none;
-			    }
-			.tool-cards {
-			    display: flex;
-			    flex-direction: column;
-			    align-items: center;
-			    text-align: center;
-			}
-			img.img-fluid.post-thumbnails.wp-post-image {
-			    height: 100px;
-			    width: 100%;
-			    border-radius: 50%;
-			}
-			/*--------------------------------------------------
-			                    Responsive Css
-			---------------------------------------------------*/
-			    @media (max-width: 991.98px) {
-			        .hero {
-			            padding: 10rem 2rem;
-			        }
-			        .pxpx{
-			            padding: 0px 5px;
-			        }
-			    }
-			
-			    @media (max-width: 768px) {
-			        .nav-links {
-			            display: none;
-			        }
-			        
-			        .hero h1 {
-			            font-size: 2rem;
-			        }
-			        
-			        .tools-grid {
-			            grid-template-columns: 1fr;
-			            padding: 1rem;
-			        }
-			    }
-			
-			    @media screen and (max-width: 650px) {
-			        .hero {
-			            padding: 10rem 2rem;
-			        }
-			        .pxpx{
-			            padding: 0px 5px;
-			        }
-			    }
-		</style>
-	</head>
+		    <!--fot test-->
+    <link rel="stylesheet" href="assets/css/pro-style.css">
+    <link rel="stylesheet" href="style.css">
+          <!--fot test-->
+      <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+      <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+      <link href="assets/css/fontawesome.min.css" rel="stylesheet">
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="asset/js/jquery-1.9.0.min.js"></script>
+      <!--fot test-->		
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <title>Online Tools Free - Make Your Life Easy with Us</title>
+      <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --background: #f8fafc;
+            --text-color: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            background: linear-gradient(45deg, #eff6ff, #ffffff);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tool-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .tool-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .category-section {
+            margin: 4rem 0;
+            padding: 0 2rem;
+        }
+
+        .category-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: var(--secondary-color);
+            color:#f8fafc;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+  </head>
 	
-	<body>
-		<!-- Navbar Section Start-->
-		<div class="bg-light nav-bg sticky-top">
-            <nav class="container navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand mobile-view" href="#"><span>Online Tools Free</span></a>
-                <div class="collapse navbar-collapse navbar-Toggler" id="navbarTogglerDemo03">
-                    <div class="desktop-view">
-                        <a class="navbar-brand" href="https://onlinetoolsfree.github.io/"><span>Online Tools Free</span></a>
-                    </div>
-                    <div>
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https//onlinetoolsfree.github.io/blogs">Blogs</a>
-                                </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://onlinetoolsfree.github.io/True-love-Calculator-soulmate.html">Love Calculator</a>
-                            </li>
-                        </ul>
-                    </div>
+  <body class="bg-light">
+    <div class="bg-light nav-bg sticky-top" id="navbar-container"></div>
+    <section class="container-fluid hero py-5">
+      <div class="container py-5" style="min-height:400px;">
+        <h1>Your All-in-One Digital Toolbox</h1>
+        <p>Make Your Life Easy with Us.</p>
+        <a href="#tools" class="cta-button">Explore Tools Now</a>
+      </div>
+    </section>
+    <div class="container-fluid bg-light">
+      <div class="container py-4">
+        <h1 class="text-center mb-4">Awesome Online Tools</h1>
+        <p class="text-center text-muted mb-5">Useful tools made with HTML, Bootstrap &amp; JavaScript</p>
+        <div class="row g-4">
+
+          <!-- Password Generator -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card tool-card shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">🔐 Password Generator</h5>
+                <div class="input-group mb-3">
+                  <input id="passwordOutput" class="form-control" type="text" readonly/>
+                  <button class="btn btn-primary" onclick="generatePassword()">Generate</button>
                 </div>
+              </div>
             </div>
-            </nav>
+          </div>
+
+          <!-- Text Counter -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card tool-card shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">📏 Text Counter</h5>
+                <textarea id="textInput" class="form-control mb-2" rows="3" placeholder="Type something..." oninput="countCharacters()"></textarea>
+                <p id="charCount" class="text-end m-0">Characters: 0</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Color Picker -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card tool-card shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">🎨 Color Picker</h5>
+                <input type="color" class="form-control form-control-color" onchange="updateColor(this.value)" value="#ff0000"/>
+                <div id="colorPreview" class="mt-3 rounded" style="height: 50px; background-color: #ff0000;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Base64 Encoder/Decoder -- >
+          <div class="col-md-6 col-lg-4">
+            <div class="card tool-card shadow-sm h-100">
+              <div class="card-body">
+                <h5 class="card-title">💾 Base64 Encoder/Decoder</h5>
+                <textarea id="base64Input" class="form-control mb-2" rows="2" placeholder="Enter text or base64..."></textarea>
+                <div class="d-grid gap-2 d-md-block">
+                  <button class="btn btn-success btn-sm" onclick="encodeBase64()">Encode</button>
+                  <button class="btn btn-warning btn-sm" onclick="decodeBase64()">Decode</button>
+                </div>
+                <pre id="base64Result" class="mt-2 p-2 small"></pre>
+              </div>
+            </div>
+          </div-->
+          <hr>
         </div>
-		<!-- Navbar Section End-->
-
-		<!-- Showcase Section Start-->
-	<section class="hero container-fluid">
-			<div class="row">
-				<div class="container">
-					<h1>Your All-in-One Digital Toolbox</h1>
-					<p>Make Your Life Easy with Us.</p>
-					<a href="#tools" class="btn btn-primary text-white">Explore Tools Now</a>
-				</div>
-			</div>
-		</section>
-		<!-- Showcase Section End-->
-		<!--Popular Tools Start-->
-		<div class="category-section" id="tools">
-			<h2 class="category-title text-center py-5">Popular <span class="title-color">FUN</span> Tools</h2>
-			<div class="row">
-				<div class="col-sm-6 tool-cards p-5">
-					<figure><img class="img-fluid post-thumbnails wp-post-image" src="https://cdn.pixabay.com/animation/2023/02/13/01/13/01-13-56-654_256.gif" alt="Love Colculator"></figure>
-					<h3>Love Calculator - True Love Calculator Soulmate</h3>
-					<p>This tool is for fun.</p>
-					<div class="learn-more"><a href="https://onlinetoolsfree.github.io/True-love-Calculator-soulmate.html">Read More</a></div>
-				</div>
-				<div class="col-sm-6 tool-cards p-5">
-					<figure><img class="img-fluid post-thumbnails wp-post-image" src="https://c.tadst.com/gfx/1200x630/og-duration-calculator.png" alt="How Many Days Between Dates Calculator"></figure>
-					<h3>How Many Days Between Dates Calculator</h3>
-					<p>This tool help you to calculate How Many Days Between Dates Calculator also help to calculate age.</p>
-					<div class="learn-more"><a href="https://onlinetoolsfree.github.io/how-many-days-between-dates-calculator.html">Read More</a></div>
-				</div>
-			</div>
-		</div>
-		<!--Popular Tools End-->
-				
-		<!-- Footer Section -->
-		<footer class="footer">
-			<div class="row pt-5">
-	                    <!-- About Us -->
-	                    <div class="col-md-3">
-	                        <h4>About Us</h4>
-	                        <p>Welcome to <strong>Online Tools Free</strong>, your go-to source for expert gardening tips, plant care guides, and home gardening inspiration.</p>
-	                    </div>
-	        
-	                    <!-- Quick Links -->
-	                    <div class="col-md-3">
-	                        <h4>Quick Links</h4>
-	                        <ul class="list-unstyled">
-	                            <li><a href="https://onlinetoolsfree.github.io/about.html" class="text-light">About</a></li>
-	                            <li><a href="https://onlinetoolsfree.github.io/#tools" class="text-light">Tools</a></li>
-	                            <li><a href="https://onlinetoolsfree.github.io/contact.html" class="text-light">Contact</a></li>
-	                            <li><a href="https://onlinetoolsfree.github.io/privacy-policy.html" class="text-light">Privacy Policy</a></li>
-				    <li><a href="https://onlinetoolsfree.github.io/disclaimer.html" class="text-light">Disclaimer</a></li>
-	                        </ul>
-	                    </div>
-	        
-	                    <!-- Social Media -->
-	                    <div class="col-md-3">
-	                        <h4>Follow Us</h4>
-	                        <a href="#" class="text-light me-2" target="_blank">Facebook</a> |
-	                        <a href="#" class="text-light me-2" target="_blank">Medium</a>
-	                    </div>
-	        
-	                    <!-- Newsletter -->
-	                    <div class="col-md-3">
-	                        <h4>Subscribe to Our Newsletter</h4>
-	                        <p>Get the latest gardening tips and updates straight to your inbox.</p>
-	                        <form action="#" method="post">
-	                            <div class="input-group">
-	                                <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
-	                                <button type="submit" class="btn btn-success">Subscribe</button>
-	                            </div>
-	                        </form>
-	                    </div>
-	                </div>
-			<div class="footer-credit">
-				<p><b>© Online Tools Free</b>. All rights reserved. Developed by <a href="https://jahidshah.com/" target="_blank" style="color: #fff;">Md Jahid Shah</a>.</p>
-			</div>
-		</footer>
-		
-		<!-- Scroll to Top Button -->
-		<button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Top</button>
-		
-		<!-- Chatbot Button -->
-		<button id="chatbotBtn" style="display:none;" onclick="openChatbot()">💬</button>
-
-		<!-- JavaScript -->
-		<script src="myscripts.js"></script>
-	</body>
+      </div>
+    </div>
+    <div class="container-fluid bg-white">
+        <div class="container py-4">
+          <div class="row pt-3">
+              <div class="col-12 pt-3">
+                <h2 class="py-3 text-center"><span class="title-color">Fun Tools</span> / <span class="title-color">Entertainment</span> Tools</h2>
+              </div>
+          </div>
+          <div class="row show-cards text-center">
+              <div class="col-sm-6">
+                <a href="/True-love-Calculator-soulmate.html" target="_blank" class="show-cards-ele">
+                    <figure><img class="img-fluid rounded" width="100" src="https://cdn.pixabay.com/animation/2023/02/13/01/13/01-13-56-654_256.gif" alt="Love Colculator"></figure>
+                    <h3>Love Calculator - True Love Calculator Soulmate</h3>
+                    <p>This tool is for fun.</p>
+                </a>
+              </div>
+              <div class="col-sm-6">
+                <a href="how-many-days-between-dates-calculator.html" class="show-cards-ele" target="_blank">
+                    <span class="tools-image">⏰</span>
+                    <h3>Date Duration Calculator</h3>
+                    <p>How Many Days Between Dates Calculator.</p>
+                </a>
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-light">
+        <div class="container py-5 text-center" id="tools">
+              <h1 class="mb-4">🌐 Online Tools Free</h1>
+              <p class="lead mb-4">Free tools made with HTML, CSS & JavaScript</p>
+              <div class="row show-cards px-2">
+                <div class="col-sm-3">
+                  <a href="password-generator.html" class="show-cards-ele">
+                    <span class="tools-image">🔐</span>
+                    <p>Password Generator</p>
+                  </a>
+                </div>
+                <div class="col-sm-3">
+                  <a href="text-counter.html" class="show-cards-ele"><span class="tools-image">📏</span>
+                    <p>Text Character Counter</p>             
+                  </a>
+                </div>
+                <div class="col-sm-3">
+                  <a href="color-picker.html" class="show-cards-ele">
+                    <span class="tools-image">🎨</span>
+                    <p>Color Picker</p>
+                  </a>
+                </div>
+                <div class="col-sm-3">
+                  <a href="base64-tool.html" class="show-cards-ele"><span class="tools-image">💾</span>
+                    <p>Base64 Encoder/Decoder</p>
+                  </a>
+                </div>
+                <div class="col-sm-3">
+                  <a href="unit-converter.html" class="show-cards-ele">
+                    <span class="tools-image">🧮</span>
+                    <p>Unit Converter (kg to lbs)</p>
+                  </a>
+                </div>
+                <div class="col-sm-3">
+                  <a href="countdown-timer.html" class="show-cards-ele">
+                    <span class="tools-image">⏰</span>
+                    <p>Countdown Timer</p>
+                  </a>
+                </div>
+                <div class="col-sm-3">
+                  <a href="image-resizer.html" class="show-cards-ele">
+                    <span class="tools-image">📷</span>
+                    <p>Image Resizer</p>
+                  </a>
+                </div>
+                <div class="col-sm-3" class="show-cards-ele">
+                  <a href="qr-code-generator.html" class="show-cards-ele"><span class="tools-image">🔍</span>
+                    <p>QR Code Generator</p>
+                  </a>
+                </div>
+                <div class="col-sm-3">
+                  <a href="json-beautifier.html" class="show-cards-ele">
+                    <span class="tools-image">🧾</span>
+                    <p>JSON Beautifier</p>
+                  </a>
+                </div>
+                <div class="col-sm-3">
+                  <a href="copy-to-clipboard.html" class="show-cards-ele">
+                    <span class="tools-image">📋</span>
+                    <p>Copy to Clipboard</p>
+                  </a>
+                </div>
+                <div class="col-sm-3">
+                  <a href="timestamp-converter.html" class="show-cards-ele">
+                    <span class="tools-image">📅</span>
+                    <p>Timestamp Converter</p>
+                  </a>
+                </div>
+                <div class="col-sm-3">
+                  <a href="lorem-ipsum-generator.html" class="show-cards-ele">
+                    <span class="tools-image">💬</span>
+                    <p>Lorem Ipsum Generator</p>
+                  </a>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="mb-4 text-center pb-3">More Tool That You Can Use for Free</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-light">
+      <div class="container">
+        <div class="row show-cards px-2">
+          <div class="col-sm-3">
+            <a href="" class="show-cards-ele">
+              <span class="tools-image">📄</span>
+              <p>PDF Viewer (using PDF.js)</p>
+            </a>
+          </div>
+          <div class="col-sm-3">
+            <a href="https://tasklytools.org/" class="show-cards-ele">
+              <span class="tools-image">🖼️</span>
+              <p>Image Compressor</p>
+            </a>
+          </div>
+          <div class="col-sm-3">
+            <a href="" class="show-cards-ele">
+              <span class="tools-image">📝</span>
+              <p>Markdown Previewer</p> 
+            </a>
+          </div>
+          <div class="col-sm-3">
+            <a href="" class="show-cards-ele">
+              <span class="tools-image">🔢</span>
+              <p>JSON Formatter</p>
+            </a>
+          </div>
+          <div class="col-sm-3">
+            <a href="" class="show-cards-ele">
+              <span class="tools-image">🌐</span>
+              <p> IP Geolocation Finder</p>
+            </a>
+          </div>
+          <div class="col-sm-3">
+            <a href="" class="show-cards-ele"><span class="tools-image">⏰</span>
+              <p> Countdown Timer</p>
+            </a>
+          </div>
+          <div class="col-sm-3">
+            <a href="" class="show-cards-ele"><span class="tools-image">⏱️</span>
+              <p> Stopwatch Timer</p>
+            </a>
+          </div>
+          <div class="col-sm-3">
+            <a href="" class="show-cards-ele"><span class="tools-image">🧮</span>
+              <p> Unit Converter (kg to lbs, etc.)</p>
+            </a>
+          </div>
+          <div class="col-sm-3">
+              <a href="" class="show-cards-ele"><span class="tools-image">✂️</span>
+                <p> Image Cropper</p>
+              </a>
+          </div>
+          <div class="col-sm-3">
+            <a href="" class="show-cards-ele"><span class="tools-image">🗣️</span>
+              <p>Speech-to-Text Converter</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <footer class="footer text-white" id="footer-container"></footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+    <script src="assets/js/footer-script.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
