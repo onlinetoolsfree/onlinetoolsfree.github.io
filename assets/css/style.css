@@ -1,0 +1,1455 @@
+/*=====================================================================================
+    Custom CSS Stylesheet
+    Author: [Your Name]
+    Description: Custom styles for layout, header, navigation, scroll to top button,
+                 search form, logo, and article content.
+======================================================================================*/
+
+/*=====================================================================================
+    1. Core Wrap CSS
+======================================================================================*/
+:root{
+    --primary-color: #007bff; /* Primary color for links and buttons */
+    --secondary-color: #212529; /* Secondary color for text */
+    --background-color: #f8f9fa; /* Background color for sections */
+    --text-color: #343a40; /* Default text color */
+    --border-color: #dee2e6; /* Border color for elements */
+    --hover-color: #0056b3; /* Hover color for links and buttons */
+    --subcategory-color:#242424; /* Color for subcategory text */
+    --black-color:#000; /* Black color for text */
+    --white-color:#fff; /* White color for text */
+    --link-color: #007bff; /* Link color */
+    --link-hover-color: #0056b3; /* Link hover color */
+    --white-color: #ffffff; /* White color for backgrounds */
+    --pink-color: #ef0067; /* Custom color for specific elements */
+    --pink-hover-color:#e6146f;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: var(--link-color) !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Oswald", sans-serif;
+    margin: 0 0 0.5em;
+    font-weight: 700;
+    line-height: 1.5rem;
+    color: var(--black-color);
+}
+ul, ol {
+    padding-left: 1.5em;
+    margin-bottom: 1em;
+    font-size: 1.3rem; /* keep text size consistent with rest of content */
+    line-height: 1.6;
+}
+
+li {
+    margin-bottom: 0.5em;
+    font-size: 1.3rem;
+    list-style-position: inside; /* improves accessibility and alignment */
+}
+.wp-caption {
+    max-width: 100%;
+    margin: 1em auto;
+    text-align: center;
+}
+.wp-caption-text {
+    font-size: 0.9em;
+    color: #666;
+}
+.gallery-caption {
+    font-style: italic;
+    text-align: center;
+}
+.bypostauthor {
+    border-left: 3px solid #0073aa;
+    padding-left: 10px;
+}
+.alignright {
+    float: right;
+    margin-left: 1em;
+}
+.alignleft {
+    float: left;
+    margin-right: 1em;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto;
+}
+.screen-reader-text {
+    position: absolute !important;
+    width: 1px; height: 1px;
+    padding: 0; overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; border: 0;
+}
+.form-select {
+    padding: 6px 0;
+    margin-bottom: 3px;
+}
+
+/* Shortcode Button css start */
+.shortcodebtn{
+    display: inline-block;
+    padding: 7px 14px;
+    background-color: var(--primary-color);
+    color: #fff !important;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.shortcodebtn:hover {
+    background-color: var(--hover-color);
+    color: #fff !important;
+    text-decoration: none;
+}
+/* Shortcode Button css end */
+
+/* Global styles end */
+section.main-wrap {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+section.main-wrap-head {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wrap {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+}
+.full-wrap {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+.hero-section-full-width{
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+	background:linear-gradient(45deg, #eff6ff, #ffffff);
+}
+.hero-section-full-width h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--link-color);
+}
+.hero-section-full-width p {
+	color: #64748b;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+.common-border{
+    border:1px solid transparent;
+    border-radius: 15px 15px 15px 15px;
+}
+.common-border:hover{
+    border:1px solid #ddd;
+}
+/*=====================================================================================
+    2. Scroll To Top Button CSS
+======================================================================================*/
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #1f6459 !important;
+    color: white !important;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#myBtn:hover {
+    background-color: #555 !important;
+}
+
+/*=====================================================================================
+    3. Header & Logo CSS
+======================================================================================*/
+header {
+    background: var(--white-color);
+    color: #020202;
+    padding: 0.1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-bottom: 1px solid #ccc;
+    transition: top 0.5s ease-in-out; /* 👈 Smooth slide */
+}
+header .site-branding h1 {
+    margin: 0;
+}
+header .site-branding a {
+    color: #fff;
+    text-decoration: none;
+}
+header.header-hidden {
+    top: -117px;
+}
+section.main_wrap.mnavbg {
+    display: none;
+}
+.top-header-bg{
+    background-color: var(--pink-color);
+    color: #fff;
+}
+.aj-square-logo {
+    width: 20%;
+    float: left;
+}
+
+.aj-square-logo a {
+    color: #ff6e00 !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+span.site-title {
+    color: var(--secondary-color) !important;
+    font-weight: 600;
+}
+.custom-logo-widget {
+    height: auto;
+    width: 200px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.custom-logo-widget img {
+    min-height: 80px;
+    width: auto;
+}
+
+span.site-title {
+    font-size: 30px;
+}
+
+/*=====================================================================================
+    4. Navigation Bar CSS
+======================================================================================*/
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
+    width: 99%;
+    margin: 0 auto;
+    position: relative !important;
+    overflow: visible !important;
+    z-index: 1050;
+	padding: 0rem 1rem;
+    font-family: "Oswald", sans-serif;
+}
+
+.navbar.sticky-top {
+    overflow: visible !important;
+    padding: 0;
+}
+
+.navbar .navbar-brand {
+    font-size: 1.5rem;
+    padding: 0;
+}
+
+.navbar .navbar-nav {
+    margin-left: auto;
+    display: flex;
+    position: relative;
+}
+
+.navbar-collapse {
+    overflow: visible !important;
+}
+
+.navbar-collapse li {
+    list-style-type: none;
+}
+
+.navbar-collapse li a {
+    text-decoration: none;
+    color: var(--text-color) !important;
+	font-size: 1.1rem;
+}
+
+.navbar-collapse li a:hover,
+a#searchIcon:hover {
+    color: var(--link-hover-color) !important;
+}
+
+.nav-class.justify-content-left ul li ul li a {
+    padding: 0.5rem 1rem;
+}
+
+div#navbarSupportedContent {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+div#navbarSupportedContent ul li p {
+    display: none;
+}
+
+div#navbarSupportedContent ul li a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+	font-size: 1.1rem;
+	border-bottom: 3px solid transparent;
+}
+div#navbarSupportedContent ul li a:hover {
+    border-bottom: 3px solid var(--link-hover-color);
+}
+div#navbarSupportedContent ul li ul li ul li p {
+    display: block;
+    padding: 0 5px;
+    margin: 0;
+}
+div#navbarSupportedContent ul li ul {
+    padding: 5px;
+}
+div#navbarSupportedContent ul li ul li a {
+    padding: 5px;
+}
+
+div#navbarSupportedContent ul li ul li a:hover {
+    border-bottom: 3px solid transparent;
+}
+/* Change the hamburger icon color */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23ff0000' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
+  .navbar-toggler {
+    border: none;
+  }  
+  /* Optional: Tweak the button itself */
+  .navbar-toggler {
+    border: none; /* remove default border */
+    padding: 0.25rem 0.5rem;
+  }
+  
+  /* Optional: Add hover effect */
+  .navbar-toggler:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+  
+  
+div#myLinks a {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+div#myLinks li {
+    list-style-type: none;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.menu ul {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu > li {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu > li {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.second-sub-blog-category {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.second-sub-blog-category li {
+    display: block;
+    padding: 5px;
+    border-top: 1px solid #ddd;
+}
+
+.second-sub-blog-category span {
+    font-weight: bold;
+    display: block;
+}
+
+.second-sub-blog-category p {
+    font-size: 0.9em;
+    color: var(--subcategory-color) !important;
+}
+
+.nav-class.navserve {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-content: center;
+    align-items: center;
+}
+
+/* Navbar Button Left */
+.custom-header-widget .wp-block-button__link {
+    border: 1px solid #1961ac !important;
+    background-color: transparent;
+    color: #1961ac !important;
+}
+
+.header-widget-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-header-widget {
+    margin: 0 0 0 25px;
+}
+
+.custom-header-widget a {
+    text-decoration: none;
+    color: #e2e2e2 !important;
+}
+
+.custom-header-widget:hover a {
+    color: #ffffff !important;
+}
+
+.custom-header-widget .wp-block-button__link:hover {
+    background: #1961ac;
+}
+
+.wp-block-button__link {
+    padding: calc(0.47em + 2px) calc(1.333em + 2px);
+}
+
+#navbarSupportedContent {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+#navbarSupportedContent.show {
+    display: block;
+    max-height: 500px; /* Adjust as needed */
+}
+
+/* Dropdown & Menu Styling */
+.navbar-nav .dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: auto;
+    min-width: 200px;
+    white-space: nowrap;
+    z-index: 1000;
+    background-color: #fff !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.navbar-nav .dropdown:hover > .dropdown-menu {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    background-color: #fff !important;
+    margin: 0;
+}
+
+.navbar-nav .dropdown > a::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 8px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid var(--link-color);
+    vertical-align: middle;
+}
+
+.navbar-nav .dropdown > ul li a::after {
+    content: normal;
+}
+
+.navbar-nav ul li a {
+    font-weight: 900;
+}
+
+.navbar-nav ul li ul li a {
+    font-weight: normal;
+}
+
+.sub-dropdown-menu {
+    min-width: 200px;
+    white-space: nowrap;
+    width: 300px;
+}
+
+.navbar-nav .dropdown-menu .menu-item-description {
+    max-width: 100%;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    padding: 0px 10px;
+    color: var(--subcategory-color) !important;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background-color: transparent !important;
+}
+
+ul.dropdown-menu li {
+    padding: 5px 0;
+}
+
+li.menu-item.menu-item-type-taxonomy.menu-item-object-category a {
+    color: #37393a !important;
+}
+
+li.menu-item.menu-item-type-taxonomy.menu-item-object-category a:hover {
+    color: #050e14 !important;
+}
+.navbar-dark .navbar-toggler {
+    color: #050e14 !important;
+    border-color: rgba(255, 255, 255, .1);
+    font-size: 35px;
+    font-weight: 900;
+}
+/*--------------------------------------------------------------------------------------
+    Menu Positioning CSS
+----------------------------------------------------------------------------------------*/
+.container-fluid.center-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.container-fluid.left-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+}
+.left-menu ul#menu-all-pages {
+    margin-left: 0;
+}
+.left-menu.d-flex.flex-wrap.flex-grow-1.justify-content-between.align-items-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+.justify-content-between.left-menu {
+    -ms-flex-pack: justify!important;
+    justify-content: none !important;
+}
+.container-fluid.left-menu .navbar-nav .dropdown .dropdown-menu {
+    right:0;
+    left: auto;
+}
+.container-fluid.right-menu .navbar-nav .dropdown .dropdown-menu {
+    right:0;
+    left: auto;
+}
+.container-fluid.center-menu .navbar-nav .dropdown .dropdown-menu {
+    right:auto;
+    left: auto;
+}
+/*========================================================================================
+   5. Hero Secrion CSS
+==========================================================================================*/
+.homepage-content {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.homepage-content h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.homepage-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.homepage-content .button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.homepage-content img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Hero Section CSS Start*/
+.herobg{
+    background-color: #f8f9fa;
+}
+.herosec{
+    padding: 20px;
+    box-sizing: border-box;
+    }
+.heroimg{
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heroimg img {
+    width: 300px;
+}
+.herosec-widget {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.herosec-widget a {
+    font-weight: bold;
+}
+.herosec-widget a:hover {
+    color: #f1f1f1;
+}
+.col-sm-6.herosec {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: larger;
+    align-content: center;
+    text-align: center;
+}
+.col-sm-6.herosec a {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #767676;
+    font-weight: bold;
+}
+.col-sm-6.herosec a:hover {
+    background-color: var(--link-hover-color);
+    color: #fff !important;
+    border: 1px solid var(--link-hover-color);
+}
+/*=====================================================================================
+    6. Search Box CSS
+======================================================================================*/
+#searchForm {
+    display: none;
+    position: absolute;
+    right: 20px;
+    background: var(--white-color);
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.5s ease;
+}
+#searchForm.show {
+    max-height: 300px; /* adjust based on form height */
+    opacity: 1;
+}
+/* Toggle Icon */
+.css-toggle-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+  }
+  
+  .css-toggle-bar {
+    height: 2px;
+    background-color: #000; /* You can change to white or custom color */
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+  }
+  input.search-field,button.search-submit {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    }
+button.wp-block-search__button.wp-element-button {
+    background: var(--pink-color);
+    color: #fff;
+    border-radius: 5px;
+}
+button.wp-block-search__button.wp-element-button:hover {
+    background: var(--pink-hover-color);
+    color: #f2f2f2;
+    border-radius: 5px;
+}
+/*====================================================================================
+    7. Index Page Post Style
+======================================================================================*/
+#latestpostarea {
+  padding: 45px 0;
+}
+#latestpostarea .blog_area {
+  width: 100%;
+  margin-bottom: 17px;
+  background: rgb(243, 243, 243);
+  padding: 15px;
+}
+#latestpostarea .post_thumb {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 15px;
+}
+#latestpostarea .post_thumb img {
+  transition: 0.5s;
+  width: 100%;
+  display: block;
+}
+#latestpostarea .post_thumb:hover img {
+  transform: scale(1.1);
+}
+#latestpostarea .post_details {
+  width: 100%;
+}
+#latestpostarea .post_details h3 {
+  font-family: "Roboto", sans-serif;
+  color: #262626;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 30px;
+}
+#latestpostarea .post_details a h3{
+  color: #262626;
+  text-decoration: none;
+  transition: 0.5s;
+}
+#latestpostarea .post_details a:hover h3{
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+#latestpostarea .post_details a:hover {
+  text-decoration: none;
+}
+/* Read More CSS */
+a.readmore-arrow {
+  color: var(--link-color);
+}
+a.readmore-arrow:hover {
+  color: var(--link-hover-color )!important;
+  text-decoration: none;
+}
+
+/* Pagenation CSS */
+p.col-12.pages {
+    display: flex;
+    gap: 5px;
+    background: #ccc;
+    padding: 15px;
+}
+a.page-numbers{
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    background: #c3c3c3;
+    color: #333 !important;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+a.page-numbers:hover {
+    background: var(--link-hover-color);
+    color: #fff !important;
+    text-decoration: none;
+}
+.page-numbers.current {
+    padding: 10px 12px;
+    margin: 0 5px;
+    background: var(--link-hover-color);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+}
+/*=====================================================================================
+    8. Content & Article CSS
+======================================================================================*/
+.main_wrap.aj-square-content-search {
+    width: 100%;
+    overflow: hidden;
+}
+span.post-author a:hover {
+    text-decoration: none;
+}
+div#aj-square-content {
+    overflow: hidden;
+}
+.post-wrap.entry-content {
+    padding: 0 15px;
+    overflow: hidden;
+    width: 100%;
+}
+h1.entry-title {
+    font-size: 2.5rem;
+    line-height: 45px;
+}
+
+.post-head-as h1 a {
+    color: var(--black-color);
+}
+.post-wrap.entry-content h2 {
+    padding: 15px 0 10px 0;
+    font-size: x-large;
+    font-weight: 900;
+}
+.post-wrap.entry-content h3 {
+    padding: 15px 0 10px 0;
+    font-size: large;
+    font-weight: 900;
+}
+.entry-content p {
+    text-align: justify;
+    font-size: 1.2rem;
+}
+.latest-content-item {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    height: 100%;
+    padding: 10px;
+}
+h2.latest-post-content.text-center {
+    padding: 30px 0;
+    font-weight: bold;
+}
+/* Post tags css*/
+.post-tags {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #666;
+}
+
+.post-tags a {
+    color: var(--link-hover-color);
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+.post-tags a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+.social-share {
+    background: #cfcfcf;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+/*Featured Image Css Start*/
+.featured_image {
+    max-height: 250px; /* Or any value based on your layout */
+    overflow: hidden;
+}
+
+.featured_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px; /* optional */
+}
+/* Featured Image CSS */
+/*=====================================================================================
+    10. Sidebar Css
+=====================================================================================*/
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px;
+    width: 100%;
+}
+.sidebar h2 {
+    padding: 5px 10px 5px 10px;
+    border-left: 5px solid var(--black-color);
+    background: #ccc;
+}
+.sidebar ul li, .sidebar ul li a {
+    list-style-type: none;
+    color: var(--secondary-color) !important;
+    padding: 7px 0;
+    font-size: large;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+}
+.sidebar ul li a:hover{
+    text-decoration: underline;
+    color: var(--link-hover-color) !important;
+}
+
+/* Tag Cloud CSS */
+.wp-block-tag-cloud {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.wp-block-tag-cloud a {
+    display: inline-block;
+    margin: 5px 3px;
+    padding: 5px;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    color: #fff !important;
+    background: #444444;
+    font-size: 1.1rem !important;
+}
+.wp-block-tag-cloud a:hover {
+    border: 3px solid var(--link-hover-color);
+    color: #fff;
+    background: var(--link-hover-color);
+    text-decoration: none;
+}
+
+/*=====================================================================================
+    9. Custom Block CSS
+======================================================================================*/
+/* Custom Block CSS Start*/
+.customblock-widget {
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+}
+.customblock-widget h2 {
+    display: inline-block; /* Make the heading behave like inline element */
+    padding: 40px 0 5px 0;
+    text-align: center;
+    position: relative;
+    }
+
+.customblock-widget h2::after {
+    content: "";
+    display: block;
+    width: 30%; /* Set a custom width for the underline */
+    height: 2px; /* Thickness of the underline */
+    background-color: #ccc; /* Color of the underline */
+    margin: 15px auto 0; /* Center the underline */
+    padding-top: 5px; /* Space between the text and the underline */
+    }
+    .wp-block-column h2 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        word-break: keep-all;
+        white-space: nowrap;
+    }
+  .customblock-widget p {
+    padding: 10px 0;
+    line-height: 30px;
+    font-size: 18px;
+    }
+  /* Custom Block CSS End*/
+
+/* Add New Hero Widget CSS Start*/
+.addnewhero {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+}
+  .addnew-hero-widget h2 {
+    padding: 50px 0;
+    text-decoration: underline;
+}
+/* Add New Hero Widget CSS End*/
+
+/* Search Icon CSS Start*/
+  .css-search-icon {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.css-search-icon::after {
+    content: '';
+    width: 10px;
+    height: 2px;
+    background: #333;
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    transform: rotate(45deg);
+    transform-origin: center;
+}
+.css-search-icon:hover {
+    border-color: var(--link-hover-color);
+}
+
+.css-search-icon:hover::after {
+    background: var(--link-hover-color);
+}
+a#searchIcon i {
+    color: #000;
+    font-size: 18px;
+}
+a#searchIcon:hover i {
+    color: var(--link-hover-color);
+}
+/* Search Icon CSS End*/
+
+/* FAQ Widget Area*/
+.faq-widget{
+    width: 100%;
+}
+/* FAQ Widget Area End*/
+/*=====================================================================================
+    11. Footer CSS
+======================================================================================*/
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+div#default-footer a {
+    color: #fff;
+}
+.footer-social-icons a {
+    padding: 0 5px;
+    font-size: 1.3rem;
+    color: #fff;
+}
+.footer-social-icons a:hover {
+    color:var(--link-hover-color);
+}
+.wp-block-column.is-layout-flow.wp-block-column-is-layout-flow {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+footer.footer-section h2 {
+    padding: 0 0 0px 5px;
+    border-left: 3px solid #fff;
+    margin-bottom: 25px;
+    color: #fff;
+}
+footer.footer-section li {
+    list-style-type: none;
+    font-size: 1.1rem;
+    margin: 0;
+}
+footer.footer-section a {
+    color: #fff !important;
+    font-size: 1.1rem;
+    text-decoration: none;
+    list-style-type: none;
+}
+footer.footer-section a:hover {
+    color: var(--link-hover-color) !important;
+    text-decoration: underline;
+}
+a.social-icon {
+    font-size: 25px;
+    margin: 5px;
+    color: #fff;
+    border: 3px solid transparent;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+    padding: 5px 8px;
+    margin: 1px;
+}
+a.social-icon:hover {
+    color: var(--pink-color) !important;
+    border: 3px solid #fff;
+    background: #fff;
+}
+/*=================================================================================
+     12. Author Widget CSS Start
+===================================================================================*/
+.author-avatar {
+    border-radius: 50%;
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    display: block;
+}
+.author-info {
+    max-width: 300px;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.author-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.author-avatar img {
+    border: 4px solid #f0f0f0;
+}
+
+/*=================================================================================
+    13. Tools Page Content
+==================================================================================*/
+.tools-head {
+    padding: 15px 0;
+}
+.tools-head h1 a {
+    text-decoration: none;
+}
+.post-content h2 {
+    font-size: 1.7rem;
+    padding: 20px 0 10px 0;
+}
+.page-contents img {
+    padding-bottom: 15px;
+}
+.page-contents h2, h3, h4 {
+    padding: 15px 0 5px 0;
+    width: 100%;
+    overflow: hidden;
+}
+.page-contents{
+    text-align: justify;
+}
+.page-contents p {
+    line-height: 35px;
+    font-size: 1.2rem;
+}
+.page-contents ol, .page-contents ul {
+    padding: 0 30px;
+    overflow: hidden;
+    line-height: 2.3rem;
+	text-align:left;
+}
+.page-contents li {
+    padding: 7px 0;
+    font-size: 1.2rem;
+}
+span.honehead {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 15px 0;
+    align-items: center;
+}
+/*=====================================================================================
+    14. Comment CSS Start
+======================================================================================*/
+.comment-body {
+    background: #f3f3f3;
+    padding: 10px;
+    border-radius: 5px;
+}
+footer.comment-meta {
+    padding: 10px;
+    background: transparent;
+    color: #020202;
+    border-bottom: 0.1px solid #ddd;
+    margin-bottom: 5px;
+}
+footer.comment-meta a {
+    color: var(--link-color) !important;
+    text-decoration: none;
+}
+footer.comment-meta a:hover {
+    color: var(--link-hover-color) !important;
+    text-decoration: underline;
+}
+.comment-author img {
+    border-radius: 50%;
+    margin: 10px;
+}
+.children {
+    padding: 0 0 0 30px;
+    list-style-type: none;
+    margin: 10px 0;
+}
+/*---------------------------------------------------------
+                Custom CSS End
+---------------------------------------------------------*/
+
+/*=====================================================================================
+                            Responsive css start
+=====================================================================================*/
+
+/*------------------------------------------------------
+                Media Queries 991.98 Start
+------------------------------------------------------*/
+@media (max-width: 991.98px) {
+
+    /* Header */
+    header {
+        position: relative;
+    }
+
+    /* Sidebar and content */
+    div#aj-square-content {
+        width: 100%;
+    }
+
+    div#sidebar {
+        width: 100%;
+    }
+
+    /* Article image */
+    article#aj-square-search-article img {
+        height: 100%;
+    }
+
+    /* Main section visibility */
+    main {
+        background: transparent;
+        background-image: url("https://your-image-url-1.png"), url("https://your-image-url-2.png");
+        background-position: center top, left top; 
+        background-repeat: no-repeat, repeat;
+        background-size: cover, auto;
+        font-family: 'DM Sans', sans-serif;
+    }
+    section.main-wrap.wrap-desk {
+        display: none;
+    }
+
+    section.main_wrap.mnavbg {
+        display: block;
+    }
+
+    /* Site title style */
+    span.site-title {
+        padding: 5px;
+    }
+
+    /* Navbar structure */
+    .navbar .navbar-nav {
+        margin: 0;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+
+    button.navbar-toggler {
+        display: block;
+    }
+
+    div#navbarSupportedContent {
+        display: none;
+        border-top: 1px solid #000;
+    }
+
+    .navbar-collapse li {
+        padding: 5px 0;
+    }
+
+    /* Navbar container */
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    /* Search form */
+    div#searchForm {
+        top: 100%;
+        right: 0;
+    }
+
+    form.search-form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    form.search-form label {
+        width: 100%;
+    }
+
+    /* Header widgets */
+    .header-widget-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+
+    .custom-header-widget {
+        margin: 0 0 35px 0;
+    }
+
+    /* Dropdown menu */
+    .navbar-nav .dropdown:hover > .dropdown-menu {
+        flex-direction: column;
+    }
+
+    .sub-dropdown-menu {
+        width: 340px;
+    }
+
+    /* Nav class styles */
+    .nav-class.navserve {
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0 0 0;
+    }
+
+    .nav-class.justify-content-left ul li a {
+        padding: 10px 0;
+    }
+    .addnewhero {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: space-around;
+        align-items: center;
+    }
+    .customblock-widget {
+        display: flex;
+        justify-content: center;
+    }
+    .full-wrap,.hero-section-full-width {
+        min-height: 100%;
+    }
+    .footer-social-icons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .container-fluid.center-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        padding:0;
+    }
+    .container-fluid.left-menu {
+        display: flex;
+        flex-direction: row !important;
+        gap: 0;
+        padding: 0;
+    }
+    .left-menu ul#menu-all-pages {
+        margin-left: 0;
+    }
+    .left-menu.d-flex.flex-wrap.flex-grow-1.justify-content-between.align-items-center {
+        display: flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+    .justify-content-between.left-menu {
+        -ms-flex-pack: justify!important;
+        justify-content: none !important;
+    }
+    .nav-color {
+        background: var(--white-color);
+        width: 100%;
+    }
+}
+/*------------------------------------------------------
+                Media Queries 991.98 End
+------------------------------------------------------*/
+
+/*------------------------------------------------------
+                Media Queries 650px Start
+------------------------------------------------------*/
+@media screen and (max-width: 650px) {
+    header {position: relative;}
+	.wp-block-column h2 {
+        line-height: 1.2; /* Adjust line height for better spacing */
+        text-align: center; /* Ensure it's centered on mobile */
+		font-size: 1.2rem;
+    }
+
+}
+/*------------------------------------------------------
+                Media Queries 650px End
+------------------------------------------------------*/
